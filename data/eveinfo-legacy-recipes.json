@@ -1,0 +1,2508 @@
+{
+  "source": "EveInfo",
+  "recipes": [
+    {
+      "blueprintId": 2742,
+      "blueprintName": "Biochemical Silo Blueprint",
+      "productId": 25270,
+      "productName": "Biochemical Silo",
+      "sourceUrl": "https://eveinfo.com/item/25270/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "blueprintId": 2743,
+      "blueprintName": "Catalyst Silo Blueprint",
+      "productId": 25271,
+      "productName": "Catalyst Silo",
+      "sourceUrl": "https://eveinfo.com/item/25271/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2744,
+      "blueprintName": "Coupling Array Blueprint",
+      "productId": 17982,
+      "productName": "Coupling Array",
+      "sourceUrl": "https://eveinfo.com/item/17982/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2745,
+      "blueprintName": "General Storage Blueprint",
+      "productId": 25821,
+      "productName": "General Storage",
+      "sourceUrl": "https://eveinfo.com/item/25821/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2746,
+      "blueprintName": "Hazardous Chemical Silo Blueprint",
+      "productId": 25280,
+      "productName": "Hazardous Chemical Silo",
+      "sourceUrl": "https://eveinfo.com/item/25280/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "blueprintId": 2747,
+      "blueprintName": "Hybrid Polymer Silo Blueprint",
+      "productId": 30655,
+      "productName": "Hybrid Polymer Silo",
+      "sourceUrl": "https://eveinfo.com/item/30655/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2748,
+      "blueprintName": "Silo Blueprint",
+      "productId": 14343,
+      "productName": "Silo",
+      "sourceUrl": "https://eveinfo.com/item/14343/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "blueprintId": 2749,
+      "blueprintName": "Advanced Large Ship Assembly Array Blueprint",
+      "productId": 24657,
+      "productName": "Advanced Large Ship Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/24657/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "blueprintId": 2751,
+      "blueprintName": "Advanced Medium Ship Assembly Array Blueprint",
+      "productId": 24655,
+      "productName": "Advanced Medium Ship Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/24655/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "blueprintId": 2753,
+      "blueprintName": "Advanced Small Ship Assembly Array Blueprint",
+      "productId": 24653,
+      "productName": "Advanced Small Ship Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/24653/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2754,
+      "blueprintName": "Ammunition Assembly Array Blueprint",
+      "productId": 24658,
+      "productName": "Ammunition Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/24658/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 111111,
+          "extraQuantity": 100000,
+          "quantity": 211111
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 39,
+          "name": "Zydrine",
+          "baseQuantity": 222,
+          "extraQuantity": 100,
+          "quantity": 322
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2756,
+      "blueprintName": "Supercapital Ship Assembly Array Blueprint",
+      "productId": 24575,
+      "productName": "Supercapital Ship Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/24575/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 111,
+          "extraQuantity": 100,
+          "quantity": 211
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 78,
+          "extraQuantity": 70,
+          "quantity": 148
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 167,
+          "extraQuantity": 150,
+          "quantity": 317
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 167,
+          "extraQuantity": 150,
+          "quantity": 317
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 111,
+          "extraQuantity": 100,
+          "quantity": 211
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 111,
+          "extraQuantity": 100,
+          "quantity": 211
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 167,
+          "extraQuantity": 150,
+          "quantity": 317
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 78,
+          "extraQuantity": 70,
+          "quantity": 148
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 44,
+          "extraQuantity": 40,
+          "quantity": 84
+        }
+      ]
+    },
+    {
+      "blueprintId": 2758,
+      "blueprintName": "Component Assembly Array Blueprint",
+      "productId": 24660,
+      "productName": "Component Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/24660/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 111111,
+          "extraQuantity": 100000,
+          "quantity": 211111
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 39,
+          "name": "Zydrine",
+          "baseQuantity": 222,
+          "extraQuantity": 100,
+          "quantity": 322
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2760,
+      "blueprintName": "Drone Assembly Array Blueprint",
+      "productId": 24659,
+      "productName": "Drone Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/24659/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 111111,
+          "extraQuantity": 100000,
+          "quantity": 211111
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 39,
+          "name": "Zydrine",
+          "baseQuantity": 222,
+          "extraQuantity": 100,
+          "quantity": 322
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2764,
+      "blueprintName": "Equipment Assembly Array Blueprint",
+      "productId": 13780,
+      "productName": "Equipment Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/13780/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2765,
+      "blueprintName": "Intensive Reprocessing Array Blueprint",
+      "productId": 19470,
+      "productName": "Intensive Reprocessing Array",
+      "sourceUrl": "https://eveinfo.com/item/19470/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 7,
+          "extraQuantity": 6,
+          "quantity": 13
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 7,
+          "extraQuantity": 6,
+          "quantity": 13
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "blueprintId": 2766,
+      "blueprintName": "Large Ship Assembly Array Blueprint",
+      "productId": 29613,
+      "productName": "Large Ship Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/29613/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "blueprintId": 2767,
+      "blueprintName": "Compression Array Blueprint",
+      "productId": 12239,
+      "productName": "Compression Array",
+      "sourceUrl": "https://eveinfo.com/item/12239/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "blueprintId": 2768,
+      "blueprintName": "Medium Ship Assembly Array Blueprint",
+      "productId": 24654,
+      "productName": "Medium Ship Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/24654/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "blueprintId": 2769,
+      "blueprintName": "Reprocessing Array Blueprint",
+      "productId": 12238,
+      "productName": "Reprocessing Array",
+      "sourceUrl": "https://eveinfo.com/item/12238/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2770,
+      "blueprintName": "Rapid Equipment Assembly Array Blueprint",
+      "productId": 16220,
+      "productName": "Rapid Equipment Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/16220/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 111111,
+          "extraQuantity": 100000,
+          "quantity": 211111
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "blueprintId": 2771,
+      "blueprintName": "Small Ship Assembly Array Blueprint",
+      "productId": 24574,
+      "productName": "Small Ship Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/24574/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "blueprintId": 2772,
+      "blueprintName": "Subsystem Assembly Array Blueprint",
+      "productId": 30389,
+      "productName": "Subsystem Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/30389/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "blueprintId": 2773,
+      "blueprintName": "Capital Ship Assembly Array Blueprint",
+      "productId": 24656,
+      "productName": "Capital Ship Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/24656/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 11,
+          "extraQuantity": 10,
+          "quantity": 21
+        }
+      ]
+    },
+    {
+      "blueprintId": 2786,
+      "blueprintName": "Moon Harvesting Array Blueprint",
+      "productId": 16221,
+      "productName": "Moon Harvesting Array",
+      "sourceUrl": "https://eveinfo.com/item/16221/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2788,
+      "blueprintName": "Cynosural Generator Array Blueprint",
+      "productId": 27673,
+      "productName": "Cynosural Generator Array",
+      "sourceUrl": "https://eveinfo.com/item/27673/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 11,
+          "extraQuantity": 10,
+          "quantity": 21
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 7,
+          "extraQuantity": 6,
+          "quantity": 13
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 7,
+          "extraQuantity": 6,
+          "quantity": 13
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "blueprintId": 2789,
+      "blueprintName": "Cynosural System Jammer Blueprint",
+      "productId": 27674,
+      "productName": "Cynosural System Jammer",
+      "sourceUrl": "https://eveinfo.com/item/27674/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 11,
+          "extraQuantity": 10,
+          "quantity": 21
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 7,
+          "extraQuantity": 6,
+          "quantity": 13
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 7,
+          "extraQuantity": 6,
+          "quantity": 13
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 11,
+          "extraQuantity": 10,
+          "quantity": 21
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "blueprintId": 2790,
+      "blueprintName": "Biochemical Reactor Array Blueprint",
+      "productId": 24684,
+      "productName": "Biochemical Reactor Array",
+      "sourceUrl": "https://eveinfo.com/item/24684/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 111,
+          "extraQuantity": 100,
+          "quantity": 211
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 222,
+          "extraQuantity": 100,
+          "quantity": 322
+        },
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2791,
+      "blueprintName": "Complex Reactor Array Blueprint",
+      "productId": 16869,
+      "productName": "Complex Reactor Array",
+      "sourceUrl": "https://eveinfo.com/item/16869/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 111,
+          "extraQuantity": 100,
+          "quantity": 211
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 222,
+          "extraQuantity": 100,
+          "quantity": 322
+        },
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2793,
+      "blueprintName": "Medium Biochemical Reactor Array Blueprint",
+      "productId": 22634,
+      "productName": "Medium Biochemical Reactor Array",
+      "sourceUrl": "https://eveinfo.com/item/22634/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2795,
+      "blueprintName": "Polymer Reactor Array Blueprint",
+      "productId": 30656,
+      "productName": "Polymer Reactor Array",
+      "sourceUrl": "https://eveinfo.com/item/30656/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2797,
+      "blueprintName": "Simple Reactor Array Blueprint",
+      "productId": 20175,
+      "productName": "Simple Reactor Array",
+      "sourceUrl": "https://eveinfo.com/item/20175/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 55556,
+          "extraQuantity": 50000,
+          "quantity": 105556
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 200,
+          "quantity": 422
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 50,
+          "quantity": 162
+        },
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 1,
+          "extraQuantity": 1,
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "blueprintId": 2800,
+      "blueprintName": "Jump Bridge Blueprint",
+      "productId": 27897,
+      "productName": "Jump Bridge",
+      "sourceUrl": "https://eveinfo.com/item/27897/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        }
+      ]
+    },
+    {
+      "blueprintId": 2820,
+      "blueprintName": "Experimental Laboratory Blueprint",
+      "productId": 24567,
+      "productName": "Experimental Laboratory",
+      "sourceUrl": "https://eveinfo.com/item/24567/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "blueprintId": 2821,
+      "blueprintName": "Research Laboratory Blueprint",
+      "productId": 16216,
+      "productName": "Research Laboratory",
+      "sourceUrl": "https://eveinfo.com/item/16216/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 4,
+          "extraQuantity": 4,
+          "quantity": 8
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 2,
+          "extraQuantity": 2,
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "blueprintId": 28605,
+      "blueprintName": "Design Laboratory Blueprint",
+      "productId": 28351,
+      "productName": "Design Laboratory",
+      "sourceUrl": "https://eveinfo.com/item/28351/",
+      "materials": [
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2868,
+          "name": "Integrity Response Drones",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 12,
+          "extraQuantity": 11,
+          "quantity": 23
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 12,
+          "extraQuantity": 11,
+          "quantity": 23
+        },
+        {
+          "id": 2871,
+          "name": "Recursive Computing Module",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2872,
+          "name": "Self-Harmonizing Power Core",
+          "baseQuantity": 9,
+          "extraQuantity": 8,
+          "quantity": 17
+        },
+        {
+          "id": 2875,
+          "name": "Sterile Conduits",
+          "baseQuantity": 12,
+          "extraQuantity": 11,
+          "quantity": 23
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 6,
+          "extraQuantity": 5,
+          "quantity": 11
+        },
+        {
+          "id": 21037,
+          "name": "Capital Construction Parts",
+          "baseQuantity": 3,
+          "extraQuantity": 3,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "blueprintId": 33515,
+      "blueprintName": "Small Mobile Siphon Unit Blueprint",
+      "productId": 33477,
+      "productName": "Small Mobile Siphon Unit",
+      "sourceUrl": "https://eveinfo.com/item/33477/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 238813,
+          "extraQuantity": 0,
+          "quantity": 238813
+        },
+        {
+          "id": 35,
+          "name": "Pyerite",
+          "baseQuantity": 34527,
+          "extraQuantity": 0,
+          "quantity": 34527
+        },
+        {
+          "id": 36,
+          "name": "Mexallon",
+          "baseQuantity": 20957,
+          "extraQuantity": 0,
+          "quantity": 20957
+        },
+        {
+          "id": 37,
+          "name": "Isogen",
+          "baseQuantity": 6611,
+          "extraQuantity": 0,
+          "quantity": 6611
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 1919,
+          "extraQuantity": 0,
+          "quantity": 1919
+        },
+        {
+          "id": 39,
+          "name": "Zydrine",
+          "baseQuantity": 1260,
+          "extraQuantity": 0,
+          "quantity": 1260
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 382,
+          "extraQuantity": 0,
+          "quantity": 382
+        },
+        {
+          "id": 9834,
+          "name": "Guidance Systems",
+          "baseQuantity": 100,
+          "extraQuantity": 100,
+          "quantity": 200
+        },
+        {
+          "id": 9842,
+          "name": "Miniature Electronics",
+          "baseQuantity": 100,
+          "extraQuantity": 100,
+          "quantity": 200
+        },
+        {
+          "id": 17392,
+          "name": "Data Chips",
+          "baseQuantity": 12,
+          "extraQuantity": 12,
+          "quantity": 24
+        }
+      ]
+    },
+    {
+      "blueprintId": 33582,
+      "blueprintName": "Small Mobile 'Hybrid' Siphon Unit Blueprint",
+      "productId": 33581,
+      "productName": "Small Mobile 'Hybrid' Siphon Unit",
+      "sourceUrl": "https://eveinfo.com/item/33581/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 238813,
+          "extraQuantity": 0,
+          "quantity": 238813
+        },
+        {
+          "id": 35,
+          "name": "Pyerite",
+          "baseQuantity": 34527,
+          "extraQuantity": 0,
+          "quantity": 34527
+        },
+        {
+          "id": 36,
+          "name": "Mexallon",
+          "baseQuantity": 20957,
+          "extraQuantity": 0,
+          "quantity": 20957
+        },
+        {
+          "id": 37,
+          "name": "Isogen",
+          "baseQuantity": 6611,
+          "extraQuantity": 0,
+          "quantity": 6611
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 1919,
+          "extraQuantity": 0,
+          "quantity": 1919
+        },
+        {
+          "id": 39,
+          "name": "Zydrine",
+          "baseQuantity": 1260,
+          "extraQuantity": 0,
+          "quantity": 1260
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 382,
+          "extraQuantity": 0,
+          "quantity": 382
+        },
+        {
+          "id": 9834,
+          "name": "Guidance Systems",
+          "baseQuantity": 100,
+          "extraQuantity": 100,
+          "quantity": 200
+        },
+        {
+          "id": 9842,
+          "name": "Miniature Electronics",
+          "baseQuantity": 100,
+          "extraQuantity": 100,
+          "quantity": 200
+        },
+        {
+          "id": 17392,
+          "name": "Data Chips",
+          "baseQuantity": 12,
+          "extraQuantity": 12,
+          "quantity": 24
+        }
+      ]
+    },
+    {
+      "blueprintId": 33584,
+      "blueprintName": "Small Mobile 'Rote' Siphon Unit Blueprint",
+      "productId": 33583,
+      "productName": "Small Mobile 'Rote' Siphon Unit",
+      "sourceUrl": "https://eveinfo.com/item/33583/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 251058,
+          "extraQuantity": 0,
+          "quantity": 251058
+        },
+        {
+          "id": 35,
+          "name": "Pyerite",
+          "baseQuantity": 35082,
+          "extraQuantity": 0,
+          "quantity": 35082
+        },
+        {
+          "id": 36,
+          "name": "Mexallon",
+          "baseQuantity": 21068,
+          "extraQuantity": 0,
+          "quantity": 21068
+        },
+        {
+          "id": 37,
+          "name": "Isogen",
+          "baseQuantity": 6611,
+          "extraQuantity": 0,
+          "quantity": 6611
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 1986,
+          "extraQuantity": 0,
+          "quantity": 1986
+        },
+        {
+          "id": 39,
+          "name": "Zydrine",
+          "baseQuantity": 1294,
+          "extraQuantity": 0,
+          "quantity": 1294
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 402,
+          "extraQuantity": 0,
+          "quantity": 402
+        },
+        {
+          "id": 9834,
+          "name": "Guidance Systems",
+          "baseQuantity": 100,
+          "extraQuantity": 100,
+          "quantity": 200
+        },
+        {
+          "id": 9842,
+          "name": "Miniature Electronics",
+          "baseQuantity": 100,
+          "extraQuantity": 100,
+          "quantity": 200
+        },
+        {
+          "id": 17392,
+          "name": "Data Chips",
+          "baseQuantity": 12,
+          "extraQuantity": 12,
+          "quantity": 24
+        }
+      ]
+    },
+    {
+      "blueprintId": 33868,
+      "blueprintName": "Thukker Component Assembly Array Blueprint",
+      "productId": 33867,
+      "productName": "Thukker Component Assembly Array",
+      "sourceUrl": "https://eveinfo.com/item/33867/",
+      "materials": [
+        {
+          "id": 34,
+          "name": "Tritanium",
+          "baseQuantity": 111111,
+          "extraQuantity": 0,
+          "quantity": 111111
+        },
+        {
+          "id": 38,
+          "name": "Nocxium",
+          "baseQuantity": 222,
+          "extraQuantity": 0,
+          "quantity": 222
+        },
+        {
+          "id": 39,
+          "name": "Zydrine",
+          "baseQuantity": 222,
+          "extraQuantity": 0,
+          "quantity": 222
+        },
+        {
+          "id": 40,
+          "name": "Megacyte",
+          "baseQuantity": 112,
+          "extraQuantity": 0,
+          "quantity": 112
+        },
+        {
+          "id": 2867,
+          "name": "Broadcast Node",
+          "baseQuantity": 1,
+          "extraQuantity": 0,
+          "quantity": 1
+        },
+        {
+          "id": 2869,
+          "name": "Nano-Factory",
+          "baseQuantity": 1,
+          "extraQuantity": 0,
+          "quantity": 1
+        },
+        {
+          "id": 2870,
+          "name": "Organic Mortar Applicators",
+          "baseQuantity": 1,
+          "extraQuantity": 0,
+          "quantity": 1
+        },
+        {
+          "id": 2876,
+          "name": "Wetware Mainframe",
+          "baseQuantity": 1,
+          "extraQuantity": 0,
+          "quantity": 1
+        },
+        {
+          "id": 33577,
+          "name": "Covert Research Tools",
+          "baseQuantity": 11,
+          "extraQuantity": 0,
+          "quantity": 11
+        }
+      ]
+    }
+  ],
+  "missing": []
+}

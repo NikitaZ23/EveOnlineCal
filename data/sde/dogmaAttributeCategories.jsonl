@@ -1,0 +1,37 @@
+{"_key": 1, "description": "Fitting capabilities of a ship", "name": "Fitting"}
+{"_key": 2, "description": "Shield attributes of ships", "name": "Shield"}
+{"_key": 3, "description": "Armor attributes of ships", "name": "Armor"}
+{"_key": 4, "description": "Structure attributes of ships", "name": "Structure"}
+{"_key": 5, "description": "Capacitor attributes for ships", "name": "Capacitor"}
+{"_key": 6, "description": "Targeting Attributes for ships", "name": "Targeting"}
+{"_key": 7, "description": "Misc. attributes", "name": "Miscellaneous"}
+{"_key": 8, "description": "Skill requirements", "name": "Required Skills"}
+{"_key": 9, "description": "Attributes already checked and not going into a category", "name": "NULL"}
+{"_key": 10, "description": "All you need to know about drones", "name": "Drones"}
+{"_key": 12, "description": "Attribs for the AI configuration", "name": "AI"}
+{"_key": 17, "description": "Attributes used for velocity, speed and such", "name": "Speed and Travel"}
+{"_key": 19, "description": "Attributes that affect loot drops", "name": "Loot"}
+{"_key": 20, "description": "Remote shield transfers, armor, structure and such  ", "name": "Remote Assistance"}
+{"_key": 21, "description": "NPC Target Painting Attributes", "name": "EW - Target Painting"}
+{"_key": 22, "description": "NPC Energy Neutralizing Attributes", "name": "EW - Energy Neutralizing"}
+{"_key": 23, "description": "NPC Remote Electronic Counter Measures Attributes", "name": "EW - Remote Electronic Counter Measures"}
+{"_key": 24, "description": "NPC Sensor Dampening Attributes", "name": "EW - Sensor Dampening"}
+{"_key": 25, "description": "NPC Target Jamming Attributes", "name": "EW - Target Jamming"}
+{"_key": 26, "description": "NPC Tracking Disruption Attributes", "name": "EW - Tracking Disruption"}
+{"_key": 27, "description": "NPC Warp Scrambling Attributes", "name": "EW - Warp Scrambling"}
+{"_key": 28, "description": "NPC Stasis Webbing  Attributes", "name": "EW - Webbing"}
+{"_key": 29, "description": "NPC Turrets Attributes", "name": "Turrets"}
+{"_key": 30, "description": "NPC Missile Attributes", "name": "Missile"}
+{"_key": 31, "description": "NPC Graphic Attributes", "name": "Graphics"}
+{"_key": 32, "description": "NPC Entity Rewards Attributes", "name": "Entity Rewards"}
+{"_key": 33, "description": "NPC Extra Attributes", "name": "Entity Extra Attributes"}
+{"_key": 34, "description": "Fighter abilities are like built-in modules on fighters", "name": "Fighter Abilities"}
+{"_key": 36, "description": "Resistances to different types of EWar Effects", "name": "EW - Resistance"}
+{"_key": 37, "description": "Bonuses", "name": "Bonuses"}
+{"_key": 38, "description": "Attributes related to fighters (but not abilities)", "name": "Fighter Attributes"}
+{"_key": 39, "description": "Attributes relating to Doomsdays and Superweapons", "name": "Superweapons"}
+{"_key": 40, "description": "Hangars & Bays", "name": "Hangars & Bays"}
+{"_key": 41, "description": "Attributes relating to the death of a ship", "name": "On Death"}
+{"_key": 42, "description": "NPC Behavior Attributes", "name": "Behavior Attributes"}
+{"_key": 51, "description": "Mining related attributes", "name": "Mining"}
+{"_key": 52, "name": "Heat"}
