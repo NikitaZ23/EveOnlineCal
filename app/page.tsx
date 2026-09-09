@@ -2750,28 +2750,28 @@ export default function Home() {
                     </div>
                     <div className="blueprint-time-grid">
                       <div>
-                        <span>Компоненты · одна линия</span>
+                        <span>Компоненты · 1 общая линия</span>
                         <strong>{formatEstimatedDuration(componentSequentialSeconds)}</strong>
                         <small>все операции последовательно</small>
                       </div>
                       <div>
-                        <span>Полный цикл · одна линия</span>
+                        <span>Полный цикл · 1 общая линия</span>
                         <strong>{formatEstimatedDuration(productionTimeEstimate.sequentialSeconds)}</strong>
                         <small>компоненты и готовый продукт</small>
                       </div>
                       <div>
-                        <span>Компоненты · параллельно</span>
+                        <span>Компоненты · по 1 линии на тип</span>
                         <strong>{formatEstimatedDuration(componentParallelSeconds)}</strong>
-                        <small>независимые ветки одновременно</small>
+                        <small>разные рецепты выполняются одновременно</small>
                       </div>
                       <div>
-                        <span>Полный цикл · параллельно</span>
+                        <span>Полный цикл · по 1 линии на тип</span>
                         <strong>{formatEstimatedDuration(productionTimeEstimate.parallelSeconds)}</strong>
                         <small>затем запуск итогового чертежа</small>
                       </div>
                     </div>
                     <p>
-                      Повторяющиеся компоненты объединены в общий спрос; остатки от полных партий используются всей цепочкой. Базовое время EVE SDE без навыков, имплантов и бонусов сооружений. Добыча, переработка и доставка сырья не учитываются.
+                      Это время производства промежуточных предметов, а не сбора ресурсов. В режиме «по 1 линии на тип» разные рецепты выполняются одновременно, но все запуски одного рецепта идут последовательно. Повторяющиеся компоненты объединены в общий спрос; остатки от полных партий используются всей цепочкой. Базовое время EVE SDE без навыков, имплантов и бонусов сооружений. Добыча, переработка и доставка сырья не учитываются.
                       {productionTimeEstimate.limitedBranches > 0 && (
                         <> {productionTimeEstimate.limitedBranches} недоступных, циклических или слишком глубоких ветвей не включено.</>
                       )}
