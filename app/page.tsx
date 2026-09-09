@@ -2134,9 +2134,9 @@ export default function Home() {
         <TabsList className="topbar-tabs" aria-label="Разделы справочника">
           <TabsTrigger value="chain"><Factory /><span className="tab-label-long">Руда → чертежи</span><span className="tab-label-short">Руда</span></TabsTrigger>
           <TabsTrigger value="sources"><Pickaxe /><span className="tab-label-long">Минерал → руда</span><span className="tab-label-short">Минералы</span></TabsTrigger>
-          <TabsTrigger value="blueprints"><FileText /><span>Чертежи</span></TabsTrigger>
           <TabsTrigger value="planetary"><Orbit /><span className="tab-label-long">Планетарка</span><span className="tab-label-short">PI</span></TabsTrigger>
           <TabsTrigger value="skills"><BookOpen /><span>Навыки</span></TabsTrigger>
+          <TabsTrigger value="blueprints"><FileText /><span>Чертежи</span></TabsTrigger>
           <TabsTrigger value="fitting"><Wrench /><span>Фиты</span></TabsTrigger>
         </TabsList>
         <div className="dataset-stats">
