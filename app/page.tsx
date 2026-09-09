@@ -124,6 +124,7 @@ type ProductionTimeEstimate = {
   sequentialSeconds: number;
   parallelSeconds: number;
   blueprintJobs: number;
+  componentBlueprints: number;
   limitedBranches: number;
 };
 
@@ -622,52 +623,100 @@ function blueprintKind(product: Product | undefined): Exclude<BlueprintKind, 'al
 function estimateBlueprintProductionTime(
   blueprint: BlueprintDefinition,
   runs: number,
-  depth: number,
-  path: Set<number>,
   producersByProductId: Map<number, BlueprintProducer[]>,
 ): ProductionTimeEstimate {
+  type PlannedComponent = BlueprintProducer & {
+    demand: number;
+    runs: number;
+  };
+
   const ownSeconds = Math.max(0, blueprint.time) * runs;
   if (blueprint.recipeStatus === 'unavailable') {
     return {
       sequentialSeconds: ownSeconds,
       parallelSeconds: ownSeconds,
-      blueprintJobs: 1,
+      blueprintJobs: runs,
+      componentBlueprints: 0,
       limitedBranches: 1,
     };
   }
 
-  const nextPath = new Set(path);
-  nextPath.add(blueprint.id);
-  const childEstimates: ProductionTimeEstimate[] = [];
-  let limitedBranches = 0;
+  const componentPlan = new Map<number, PlannedComponent>();
+  const limitedBranches = new Set<string>();
 
-  for (const material of blueprint.materials) {
-    const requiredQuantity = material.quantity * runs;
-    const producers = producersByProductId.get(material.id) ?? [];
-    const producer = producers.find(({ blueprint: candidate }) => !nextPath.has(candidate.id));
-    const materialDepth = depth + 1;
-    if (producer && materialDepth <= 8) {
-      const childRuns = Math.max(1, Math.ceil(requiredQuantity / Math.max(1, producer.product.quantity)));
-      childEstimates.push(estimateBlueprintProductionTime(
-        producer.blueprint,
-        childRuns,
-        materialDepth,
-        nextPath,
-        producersByProductId,
-      ));
-    } else if (producers.length && (!producer || materialDepth > 8)) {
-      limitedBranches += 1;
+  function addDemand(productId: number, quantity: number, depth: number, path: Set<number>) {
+    if (quantity <= 0) return;
+    const producers = producersByProductId.get(productId) ?? [];
+    if (!producers.length) return;
+    if (depth > 8) {
+      limitedBranches.add(`depth:${productId}`);
+      return;
+    }
+
+    const existing = componentPlan.get(productId);
+    const producer = existing ?? producers.find(({ blueprint: candidate }) => !path.has(candidate.id));
+    if (!producer || path.has(producer.blueprint.id)) {
+      limitedBranches.add(`cycle:${productId}`);
+      return;
+    }
+
+    const planned = existing ?? {
+      ...producer,
+      demand: 0,
+      runs: 0,
+    };
+    if (!existing) componentPlan.set(productId, planned);
+
+    planned.demand += quantity;
+    const requiredRuns = Math.ceil(planned.demand / Math.max(1, planned.product.quantity));
+    const additionalRuns = Math.max(0, requiredRuns - planned.runs);
+    if (!additionalRuns) return;
+
+    planned.runs += additionalRuns;
+    if (planned.blueprint.recipeStatus === 'unavailable') {
+      limitedBranches.add(`unavailable:${planned.blueprint.id}`);
+      return;
+    }
+
+    const nextPath = new Set(path);
+    nextPath.add(planned.blueprint.id);
+    for (const material of planned.blueprint.materials) {
+      addDemand(material.id, material.quantity * additionalRuns, depth + 1, nextPath);
     }
   }
 
+  const rootPath = new Set([blueprint.id]);
+  for (const material of blueprint.materials) {
+    addDemand(material.id, material.quantity * runs, 1, rootPath);
+  }
+
+  function criticalPathSeconds(currentBlueprint: BlueprintDefinition, currentRuns: number, path: Set<number>): number {
+    const nextPath = new Set(path);
+    nextPath.add(currentBlueprint.id);
+    let longestDependency = 0;
+    for (const material of currentBlueprint.materials) {
+      const planned = componentPlan.get(material.id);
+      if (!planned || nextPath.has(planned.blueprint.id)) continue;
+      longestDependency = Math.max(
+        longestDependency,
+        criticalPathSeconds(planned.blueprint, planned.runs, nextPath),
+      );
+    }
+    return Math.max(0, currentBlueprint.time) * currentRuns + longestDependency;
+  }
+
+  const componentSeconds = [...componentPlan.values()].reduce(
+    (sum, planned) => sum + Math.max(0, planned.blueprint.time) * planned.runs,
+    0,
+  );
+  const componentRuns = [...componentPlan.values()].reduce((sum, planned) => sum + planned.runs, 0);
+
   return {
-    sequentialSeconds: ownSeconds + childEstimates.reduce((sum, estimate) => sum + estimate.sequentialSeconds, 0),
-    parallelSeconds: ownSeconds + childEstimates.reduce(
-      (longest, estimate) => Math.max(longest, estimate.parallelSeconds),
-      0,
-    ),
-    blueprintJobs: 1 + childEstimates.reduce((sum, estimate) => sum + estimate.blueprintJobs, 0),
-    limitedBranches: limitedBranches + childEstimates.reduce((sum, estimate) => sum + estimate.limitedBranches, 0),
+    sequentialSeconds: ownSeconds + componentSeconds,
+    parallelSeconds: criticalPathSeconds(blueprint, runs, new Set<number>()),
+    blueprintJobs: runs + componentRuns,
+    componentBlueprints: componentPlan.size,
+    limitedBranches: limitedBranches.size,
   };
 }
 
@@ -1738,8 +1787,6 @@ export default function Home() {
     return estimateBlueprintProductionTime(
       selectedDependencyBlueprint,
       1,
-      0,
-      new Set<number>(),
       producersByProductId,
     );
   }, [producersByProductId, selectedDependencyBlueprint]);
@@ -2697,7 +2744,8 @@ export default function Home() {
                     <div className="blueprint-time-heading">
                       <span>Оценка времени для одного запуска</span>
                       <small>
-                        {Math.max(0, productionTimeEstimate.blueprintJobs - 1)} производственных этапов компонентов
+                        {numberFormat.format(Math.max(0, productionTimeEstimate.blueprintJobs - 1))} запусков ·{' '}
+                        {numberFormat.format(productionTimeEstimate.componentBlueprints)} видов компонентов
                       </small>
                     </div>
                     <div className="blueprint-time-grid">
@@ -2723,7 +2771,7 @@ export default function Home() {
                       </div>
                     </div>
                     <p>
-                      Базовое время EVE SDE без навыков, имплантов и бонусов сооружений. Добыча, переработка и доставка сырья не учитываются.
+                      Повторяющиеся компоненты объединены в общий спрос; остатки от полных партий используются всей цепочкой. Базовое время EVE SDE без навыков, имплантов и бонусов сооружений. Добыча, переработка и доставка сырья не учитываются.
                       {productionTimeEstimate.limitedBranches > 0 && (
                         <> {productionTimeEstimate.limitedBranches} недоступных, циклических или слишком глубоких ветвей не включено.</>
                       )}
