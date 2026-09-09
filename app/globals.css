@@ -1110,6 +1110,26 @@ select {
   background: rgba(8, 20, 27, 0.86);
 }
 
+.blueprint-tree-mode-options,
+.blueprint-tree-expansion-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.blueprint-tree-expansion-actions {
+  margin-left: auto;
+}
+
+.blueprint-tree-expansion-actions button {
+  min-width: 0;
+  color: #84a5ad;
+}
+
+.blueprint-tree-expansion-actions button:hover {
+  color: #84dadd;
+}
+
 .blueprint-tree-mode-tabs button {
   min-width: 132px;
   height: 34px;
@@ -1869,6 +1889,7 @@ select {
 }
 
 .dependency-node {
+  position: relative;
   width: 560px;
   min-height: 72px;
   display: grid;
@@ -1882,6 +1903,46 @@ select {
   background: rgba(8, 21, 28, 0.97);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
   text-align: left;
+}
+
+.dependency-blueprint-card {
+  position: relative;
+  width: 560px;
+}
+
+.dependency-blueprint-card > .dependency-node {
+  width: 100%;
+}
+
+.dependency-branch-toggle {
+  position: absolute;
+  top: 50%;
+  right: -36px;
+  z-index: 3;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #31515c;
+  border-radius: 7px;
+  color: #6ed4d7;
+  background: rgba(8, 25, 33, 0.98);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.26);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: border-color 150ms ease, color 150ms ease, background 150ms ease;
+}
+
+.dependency-branch-toggle:hover {
+  border-color: #69cdd0;
+  color: #a2f1f2;
+  background: #10313a;
+}
+
+.dependency-branch-toggle svg {
+  width: 15px;
+  height: 15px;
 }
 
 button.dependency-node {
@@ -4166,6 +4227,26 @@ button.pi-dependency-node:hover {
 
   .dependency-calculation-note {
     display: none;
+  }
+
+  .blueprint-tree-mode-tabs {
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .blueprint-tree-mode-options,
+  .blueprint-tree-expansion-actions {
+    width: 100%;
+  }
+
+  .blueprint-tree-mode-options button,
+  .blueprint-tree-expansion-actions button {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .blueprint-tree-expansion-actions {
+    margin-left: 0;
   }
 
   .blueprint-back-button {

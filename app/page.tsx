@@ -8,6 +8,8 @@ import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
+  ChevronsDown,
+  ChevronsUp,
   FileText,
   Factory,
   FlaskConical,
@@ -126,6 +128,11 @@ type ProductionTimeEstimate = {
   blueprintJobs: number;
   componentBlueprints: number;
   limitedBranches: number;
+};
+
+type TreeExpansionCommand = {
+  mode: 'expanded' | 'collapsed';
+  revision: number;
 };
 
 type BlueprintKind =
@@ -952,6 +959,7 @@ function BlueprintDependencyBranch({
   planetaryCommodityById,
   planetById,
   onSelectBlueprint,
+  treeExpansion,
   root = false,
   rootAside,
 }: {
@@ -966,11 +974,18 @@ function BlueprintDependencyBranch({
   planetaryCommodityById: Map<number, PlanetaryCommodity>;
   planetById: Map<string, PlanetType>;
   onSelectBlueprint: (blueprintId: number) => void;
+  treeExpansion: TreeExpansionCommand;
   root?: boolean;
   rootAside?: ReactNode;
 }) {
+  const [expanded, setExpanded] = useState(treeExpansion.mode === 'expanded');
+  useEffect(() => {
+    setExpanded(treeExpansion.mode === 'expanded');
+  }, [treeExpansion.mode, treeExpansion.revision]);
+
   const primaryProduct = blueprint.products[0];
   const isPlanetaryBlueprint = blueprintKind(primaryProduct) === 'planetary';
+  const hasMaterials = blueprint.materials.length > 0;
   const nextPath = new Set(path);
   nextPath.add(blueprint.id);
 
@@ -1007,33 +1022,56 @@ function BlueprintDependencyBranch({
                 </>
               )}
             </div>
+            {hasMaterials && (
+              <button
+                type="button"
+                className="dependency-branch-toggle"
+                aria-expanded={expanded}
+                aria-label={`${expanded ? 'Свернуть' : 'Развернуть'} состав ${blueprint.name}`}
+                onClick={() => setExpanded((value) => !value)}
+              >
+                {expanded ? <ChevronDown aria-hidden="true" /> : <ChevronRight aria-hidden="true" />}
+              </button>
+            )}
           </article>
         </div>
       ) : (
-        <button
-          type="button"
-          className="dependency-node dependency-blueprint-node"
-          onClick={() => onSelectBlueprint(blueprint.id)}
-          aria-label={`Открыть ${blueprint.name} как выбранный чертёж`}
-        >
-          <img src={productIconUrl(primaryProduct?.id ?? blueprint.id)} alt="" loading="lazy" />
-          <div className="dependency-node-copy">
-            <span className="eyebrow">{isPlanetaryBlueprint ? 'Планетарная схема' : 'Чертёж компонента'}</span>
-            <strong>{blueprint.name}</strong>
-            <small>
-              {primaryProduct?.name ?? 'Продукт'} × {numberFormat.format(primaryProduct?.quantity ?? 1)} · {isPlanetaryBlueprint ? 'Планетарное производство' : activityLabel(blueprint.activity)}
-            </small>
-          </div>
-          <div className="dependency-quantity">
-            <span>Нужно</span>
-            <b>× {numberFormat.format(requiredQuantity)}</b>
-            <small>{numberFormat.format(runs)} запуск. · открыть</small>
-            <ChevronRight className="dependency-open-icon" aria-hidden="true" />
-          </div>
-        </button>
+        <div className="dependency-blueprint-card">
+          <button
+            type="button"
+            className="dependency-node dependency-blueprint-node"
+            onClick={() => onSelectBlueprint(blueprint.id)}
+            aria-label={`Открыть ${blueprint.name} как выбранный чертёж`}
+          >
+            <img src={productIconUrl(primaryProduct?.id ?? blueprint.id)} alt="" loading="lazy" />
+            <div className="dependency-node-copy">
+              <span className="eyebrow">{isPlanetaryBlueprint ? 'Планетарная схема' : 'Чертёж компонента'}</span>
+              <strong>{blueprint.name}</strong>
+              <small>
+                {primaryProduct?.name ?? 'Продукт'} × {numberFormat.format(primaryProduct?.quantity ?? 1)} · {isPlanetaryBlueprint ? 'Планетарное производство' : activityLabel(blueprint.activity)}
+              </small>
+            </div>
+            <div className="dependency-quantity">
+              <span>Нужно</span>
+              <b>× {numberFormat.format(requiredQuantity)}</b>
+              <small>{numberFormat.format(runs)} запуск. · открыть</small>
+            </div>
+          </button>
+          {hasMaterials && (
+            <button
+              type="button"
+              className="dependency-branch-toggle"
+              aria-expanded={expanded}
+              aria-label={`${expanded ? 'Свернуть' : 'Развернуть'} состав ${blueprint.name}`}
+              onClick={() => setExpanded((value) => !value)}
+            >
+              {expanded ? <ChevronDown aria-hidden="true" /> : <ChevronRight aria-hidden="true" />}
+            </button>
+          )}
+        </div>
       )}
 
-      {!!blueprint.materials.length && (
+      {hasMaterials && expanded && (
         <div className="dependency-children">
           {blueprint.materials.map((material) => (
             <DependencyMaterialBranch
@@ -1048,6 +1086,7 @@ function BlueprintDependencyBranch({
               planetaryCommodityById={planetaryCommodityById}
               planetById={planetById}
               onSelectBlueprint={onSelectBlueprint}
+              treeExpansion={treeExpansion}
             />
           ))}
         </div>
@@ -1067,6 +1106,7 @@ function DependencyMaterialBranch({
   planetaryCommodityById,
   planetById,
   onSelectBlueprint,
+  treeExpansion,
 }: {
   material: BlueprintMaterial;
   requiredQuantity: number;
@@ -1078,6 +1118,7 @@ function DependencyMaterialBranch({
   planetaryCommodityById: Map<number, PlanetaryCommodity>;
   planetById: Map<string, PlanetType>;
   onSelectBlueprint: (blueprintId: number) => void;
+  treeExpansion: TreeExpansionCommand;
 }) {
   const mineral = mineralById.get(material.id);
   if (mineral) {
@@ -1107,6 +1148,7 @@ function DependencyMaterialBranch({
         planetaryCommodityById={planetaryCommodityById}
         planetById={planetById}
         onSelectBlueprint={onSelectBlueprint}
+        treeExpansion={treeExpansion}
       />
     );
   }
@@ -1385,6 +1427,10 @@ export default function Home() {
   const [skillGroup, setSkillGroup] = useState('all');
   const [skillTargetLevel, setSkillTargetLevel] = useState<1 | 2 | 3 | 4 | 5>(5);
   const [blueprintTreeMode, setBlueprintTreeMode] = useState<BlueprintTreeMode>('materials');
+  const [blueprintTreeExpansion, setBlueprintTreeExpansion] = useState<TreeExpansionCommand>({
+    mode: 'expanded',
+    revision: 0,
+  });
   const [activeTab, setActiveTab] = useState<ActiveTab>('chain');
   const [selectedOreId, setSelectedOreId] = useState<number | null>(null);
   const [selectedMineralId, setSelectedMineralId] = useState<number | null>(null);
@@ -2649,30 +2695,56 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="blueprint-tree-mode-tabs" role="tablist" aria-label="Содержимое дерева чертежа">
-              <button
-                type="button"
-                role="tab"
-                aria-selected={blueprintTreeMode === 'materials'}
-                className={blueprintTreeMode === 'materials' ? 'is-active' : ''}
-                onClick={() => setBlueprintTreeMode('materials')}
-              >
-                <Boxes aria-hidden="true" />
-                <span>Материалы</span>
-              </button>
-              <button
-                type="button"
-                role="tab"
-                aria-selected={blueprintTreeMode === 'skills'}
-                className={blueprintTreeMode === 'skills' ? 'is-active' : ''}
-                onClick={() => setBlueprintTreeMode('skills')}
-              >
-                <BookOpen aria-hidden="true" />
-                <span>Навыки</span>
-                {selectedDependencyBlueprint && (
-                  <small>{numberFormat.format(selectedDependencyBlueprint.skills.length)}</small>
-                )}
-              </button>
+            <div className="blueprint-tree-mode-tabs">
+              <div className="blueprint-tree-mode-options" role="tablist" aria-label="Содержимое дерева чертежа">
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={blueprintTreeMode === 'materials'}
+                  className={blueprintTreeMode === 'materials' ? 'is-active' : ''}
+                  onClick={() => setBlueprintTreeMode('materials')}
+                >
+                  <Boxes aria-hidden="true" />
+                  <span>Материалы</span>
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={blueprintTreeMode === 'skills'}
+                  className={blueprintTreeMode === 'skills' ? 'is-active' : ''}
+                  onClick={() => setBlueprintTreeMode('skills')}
+                >
+                  <BookOpen aria-hidden="true" />
+                  <span>Навыки</span>
+                  {selectedDependencyBlueprint && (
+                    <small>{numberFormat.format(selectedDependencyBlueprint.skills.length)}</small>
+                  )}
+                </button>
+              </div>
+              {blueprintTreeMode === 'materials' && selectedDependencyBlueprint && (
+                <div className="blueprint-tree-expansion-actions" role="group" aria-label="Управление ветвями дерева">
+                  <button
+                    type="button"
+                    onClick={() => setBlueprintTreeExpansion((command) => ({
+                      mode: 'collapsed',
+                      revision: command.revision + 1,
+                    }))}
+                  >
+                    <ChevronsUp aria-hidden="true" />
+                    <span>Свернуть всё</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setBlueprintTreeExpansion((command) => ({
+                      mode: 'expanded',
+                      revision: command.revision + 1,
+                    }))}
+                  >
+                    <ChevronsDown aria-hidden="true" />
+                    <span>Развернуть всё</span>
+                  </button>
+                </div>
+              )}
             </div>
 
             {selectedDependencyBlueprint && (
@@ -2874,6 +2946,7 @@ export default function Home() {
                 <div className="dependency-tree">
                   {blueprintTreeMode === 'materials' ? (
                     <BlueprintDependencyBranch
+                      key={selectedDependencyBlueprint.id}
                       blueprint={selectedDependencyBlueprint}
                       requiredQuantity={selectedDependencyBlueprint.products[0]?.quantity ?? 1}
                       runs={1}
@@ -2885,6 +2958,7 @@ export default function Home() {
                       planetaryCommodityById={planetaryCommodityById}
                       planetById={planetById}
                       onSelectBlueprint={selectNestedBlueprint}
+                      treeExpansion={blueprintTreeExpansion}
                       root
                       rootAside={<BlueprintModelPreview product={selectedDependencyProduct} />}
                     />
