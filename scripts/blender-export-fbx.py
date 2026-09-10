@@ -68,8 +68,12 @@ def save_textures(texture_directory):
             image.filepath_raw = destination
             image.file_format = "PNG"
             image.save()
+            if image.packed_file:
+                image.unpack(method="REMOVE")
+            image.filepath_raw = destination
             image.filepath = destination
             image.source = "FILE"
+            image.reload()
             paths[image.as_pointer()] = destination
         except Exception as error:
             print(f"[texture warning] {image.name}: {error}")
