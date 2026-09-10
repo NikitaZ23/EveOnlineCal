@@ -9,6 +9,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "build:fitting-data": "node scripts/build-fitting-data.mjs",
+    "convert:models:fbx": "node scripts/convert-models-to-fbx.mjs",
     "verify:models": "node scripts/verify-model-catalog.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",

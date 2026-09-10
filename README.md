@@ -45,6 +45,7 @@ npm run build               # производственная сборка
 npm start                   # запуск собранной версии
 npm run build:fitting-data  # пересборка каталога фитов из локального SDE
 npm run verify:models       # проверка локального каталога GLB-моделей
+npm run convert:models:fbx  # пакетная конвертация моделей в FBX для UE5
 ```
 
 Скрипты пересборки данных ожидают исходный EVE SDE и каталог моделей в путях, настроенных для локальной рабочей среды. Готовые JSON-каталоги уже находятся в `public`, поэтому для обычного запуска пересобирать их не требуется.
@@ -61,6 +62,33 @@ scripts/                     генераторы и средства прове
 ```
 
 Крупные 3D-модели не хранятся в этом репозитории. Сайт загружает их из внешнего каталога, указанного в `public/eve-3d-models.json`.
+
+## Конвертация моделей в FBX для Unreal Engine 5
+
+Конвертер использует Blender в фоновом режиме, переносит геометрию и материалы, сохраняет встроенные текстуры GLB в PNG и вкладывает их в FBX. Для каждого объекта также создаётся `materials.json`, а общий `fbx-manifest.json` связывает игровые `typeID` с готовыми файлами.
+
+В локальной структуре проекта исходники уже находятся в `E:\AI\Projects\EveOnlineCal\3d-models\EVE_Model_Gallery\docs`. По умолчанию результат записывается в `E:\AI\Projects\EveOnlineCal\3d-models\FBX_UE5`.
+
+Сначала можно проверить план без конвертации:
+
+```powershell
+npm run convert:models:fbx -- --dry-run
+```
+
+Конвертация всех моделей:
+
+```powershell
+npm run convert:models:fbx -- --blender "C:\Program Files\Blender Foundation\Blender 4.5\blender.exe"
+```
+
+Проверка на одной модели и повторная принудительная конвертация:
+
+```powershell
+npm run convert:models:fbx -- --type-id 11567 --blender "C:\путь\к\blender.exe"
+npm run convert:models:fbx -- --force --blender "C:\путь\к\blender.exe"
+```
+
+Готовый FBX экспортируется с осями `-Y Forward, Z Up`, масштабом `1` и настройками единиц для UE5. Текстуры остаются рядом в папке `Textures` и одновременно встраиваются в FBX. FBX не умеет полностью описать сложные PBR-материалы GLB, поэтому в Unreal Engine отдельные карты metallic, roughness, normal и emissive иногда потребуется подключить по `materials.json`.
 
 ## Источники данных и права
 
