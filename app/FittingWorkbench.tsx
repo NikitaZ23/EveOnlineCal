@@ -270,6 +270,19 @@ function itemFitsHull(item: FittingItem, hull: FittingHull) {
   return true;
 }
 
+function chargeCompatibilityError(item: FittingItem, charge: FittingCharge) {
+  const wrongGroup = !item.chargeGroupIds.includes(charge.groupId);
+  const wrongSize = Boolean(item.chargeSize && charge.chargeSize && item.chargeSize !== charge.chargeSize);
+  if (wrongGroup && wrongSize) return 'несовместимые группа и размер';
+  if (wrongGroup) return 'несовместимая группа';
+  if (wrongSize) return 'несовместимый размер';
+  return '';
+}
+
+function chargeFitsItem(item: FittingItem, charge: FittingCharge) {
+  return chargeCompatibilityError(item, charge) === '';
+}
+
 function recommendationText(value: string) {
   return value
     .toLocaleLowerCase('en')
@@ -703,6 +716,11 @@ export default function FittingWorkbench() {
       if (!item) continue;
       byType.set(item.id, (byType.get(item.id) ?? 0) + 1);
       byGroup.set(item.groupId, (byGroup.get(item.groupId) ?? 0) + 1);
+      if (entry.chargeId) {
+        const charge = chargeById.get(entry.chargeId);
+        if (!charge) result.push(`${item.name}: заряд отсутствует в справочнике`);
+        else if (!chargeFitsItem(item, charge)) result.push(`${item.name}: несовместимый заряд ${charge.name}`);
+      }
     }
     for (const [typeId, count] of byType) {
       const item = itemById.get(typeId);
@@ -722,7 +740,7 @@ export default function FittingWorkbench() {
       result.push('Установлено несколько подсистем одного назначения');
     }
     return [...new Set(result)];
-  }, [allFixedEntries, data, fitted, itemById, selectedHull, totals]);
+  }, [allFixedEntries, chargeById, data, fitted, itemById, selectedHull, totals]);
 
   function chooseHull(hull: FittingHull) {
     setSelectedHullId(hull.id);
@@ -842,8 +860,7 @@ export default function FittingWorkbench() {
 
   function compatibleCharges(item: FittingItem) {
     if (!data || !item.chargeGroupIds.length) return [];
-    return data.charges.filter((charge) => item.chargeGroupIds.includes(charge.groupId)
-      && (!item.chargeSize || !charge.chargeSize || item.chargeSize === charge.chargeSize));
+    return data.charges.filter((charge) => chargeFitsItem(item, charge));
   }
 
   function setCharge(slot: SlotName, index: number, chargeId: number | undefined) {
@@ -851,7 +868,12 @@ export default function FittingWorkbench() {
       if (!current) return current;
       const entries = [...current[slot]];
       const entry = entries[index];
-      if (entry) entries[index] = { ...entry, chargeId };
+      const item = entry ? itemById.get(entry.itemId) : undefined;
+      const charge = chargeId ? chargeById.get(chargeId) : undefined;
+      if (entry) entries[index] = {
+        ...entry,
+        chargeId: item && charge && chargeFitsItem(item, charge) ? charge.id : undefined,
+      };
       return { ...current, [slot]: entries };
     });
   }
@@ -864,7 +886,8 @@ export default function FittingWorkbench() {
       blocks.push(fitted[slot].map((entry) => {
         if (!entry) return `[Empty ${slot === 'mid' ? 'Med' : slot[0].toUpperCase() + slot.slice(1)} slot]`;
         const item = itemById.get(entry.itemId);
-        return item ? fitLine(item, entry.chargeId ? chargeById.get(entry.chargeId) : undefined) : '';
+        const charge = entry.chargeId ? chargeById.get(entry.chargeId) : undefined;
+        return item ? fitLine(item, charge && chargeFitsItem(item, charge) ? charge : undefined) : '';
       }).filter(Boolean).join('\n'));
     }
     const bayLines = [...fitted.drone, ...fitted.fighter].map((entry) => {
@@ -915,6 +938,7 @@ export default function FittingWorkbench() {
     }
     const racks = emptyRacks(hull);
     const skipped: string[] = [];
+    const rejectedCharges: string[] = [];
     for (const sourceLine of lines.slice(headerIndex + 1)) {
       const line = sourceLine.trim();
       if (!line || /^\[Empty .+ slot\]$/i.test(line)) continue;
@@ -939,7 +963,16 @@ export default function FittingWorkbench() {
         continue;
       }
       const charge = chargeName ? chargeByName.get(chargeName.toLocaleLowerCase('en')) : undefined;
-      racks[item.slot][target] = { itemId: item.id, chargeId: charge?.id };
+      if (chargeName && !charge) {
+        rejectedCharges.push(`${chargeName} для ${item.name} — заряд не найден`);
+      } else if (charge) {
+        const error = chargeCompatibilityError(item, charge);
+        if (error) rejectedCharges.push(`${charge.name} для ${item.name} — ${error}`);
+      }
+      racks[item.slot][target] = {
+        itemId: item.id,
+        chargeId: charge && chargeFitsItem(item, charge) ? charge.id : undefined,
+      };
     }
     setHullKind(hull.kind);
     setSelectedHullId(hull.id);
@@ -955,10 +988,16 @@ export default function FittingWorkbench() {
     setItemLevel('all');
     setItemPreference('recommended');
     setSelectedSavedFitId(null);
-    setExchangeMessage(skipped.length
-      ? `Фит загружен. Пропущено позиций: ${skipped.length} (${skipped.slice(0, 3).join(', ')}${skipped.length > 3 ? '…' : ''}).`
-      : 'Фит успешно загружен.');
-    if (!skipped.length) setExchangeMode(null);
+    const importWarnings = [
+      skipped.length
+        ? `Пропущено позиций: ${skipped.length} (${skipped.slice(0, 3).join(', ')}${skipped.length > 3 ? '…' : ''}).`
+        : '',
+      rejectedCharges.length
+        ? `Отклонено зарядов: ${rejectedCharges.length} (${rejectedCharges.slice(0, 3).join('; ')}${rejectedCharges.length > 3 ? '…' : ''}).`
+        : '',
+    ].filter(Boolean);
+    setExchangeMessage(importWarnings.length ? `Фит загружен. ${importWarnings.join(' ')}` : 'Фит успешно загружен.');
+    if (!importWarnings.length) setExchangeMode(null);
   }
 
   if (loadError) {
@@ -1079,6 +1118,9 @@ export default function FittingWorkbench() {
                   {fitted[slot].map((entry, index) => {
                     const item = entry ? itemById.get(entry.itemId) : undefined;
                     const charges = item ? compatibleCharges(item) : [];
+                    const selectedChargeId = entry?.chargeId && charges.some((charge) => charge.id === entry.chargeId)
+                      ? String(entry.chargeId)
+                      : '';
                     return (
                       <div
                         className={`fit-slot ${selectedSection === slot && selectedSlotIndex === index ? 'is-selected' : ''} ${item ? 'is-filled' : ''}`}
@@ -1096,7 +1138,7 @@ export default function FittingWorkbench() {
                               <strong>{displayName(item)}</strong>
                               <span>{item.groupRu} · {numberFormat.format(item.cpu)} ЦПУ · {numberFormat.format(item.powergrid)} МВт</span>
                               {charges.length > 0 && (
-                                <NativeSelect value={entry?.chargeId ? String(entry.chargeId) : ''} onChange={(event) => setCharge(slot, index, event.target.value ? Number(event.target.value) : undefined)} aria-label={`Заряд для ${item.name}`}>
+                                <NativeSelect value={selectedChargeId} onChange={(event) => setCharge(slot, index, event.target.value ? Number(event.target.value) : undefined)} aria-label={`Заряд для ${item.name}`}>
                                   <NativeSelectOption value="">Без заряда</NativeSelectOption>
                                   {charges.map((charge) => <NativeSelectOption value={String(charge.id)} key={charge.id}>{displayName(charge)}</NativeSelectOption>)}
                                 </NativeSelect>
